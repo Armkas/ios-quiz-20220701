@@ -21,6 +21,14 @@ class ViewController: UIViewController {
     
     var pageViewControllerObject: PageViewController?
     
+    /*假如不用containerView 就要用以下方法才能把一个VC加进另一个VC
+    let vc: PageViewController() = XXX
+    self.addChild(vc)//先把vc加入另一个vc
+    vc.view.frame = contentView.bounds  设定子View宽度，注意是子VC外边等于父VC内边// or, better, turn off `translatesAutoresizingMaskIntoConstraints` and then define constraints for this subview
+    contentView.addSubview(vc.view)//然后View级别也要加进去
+     */
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -32,11 +40,12 @@ class ViewController: UIViewController {
         rightView.addGestureRecognizer(clickRight)
     }
     
+    //这个方法能取得整个sb中所有VC的实例，从中选择需要的就行
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // get PageViewController object
         if let vc = segue.destination as? PageViewController {
             self.pageViewControllerObject = vc
-            vc.swipeDelegate = self
+            vc.swipeDelegate = self//要没有这个这里的delegate不好弄，因为隔了一个contain view
         }
     }
     

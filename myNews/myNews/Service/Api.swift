@@ -13,6 +13,7 @@ final class Api {
 
 extension Api {
 
+    // Rest api没有最endpoint 对应 能对应更多不同api最好
     func getData(_ completion: @escaping ([Section]?, Error?) -> Void)  {
         guard let url = URL(string: "https://deeplink.dev.n8s.jp/quiz/followables.json") else { return }
         var request = URLRequest(url: url)

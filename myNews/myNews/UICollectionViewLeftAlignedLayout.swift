@@ -15,6 +15,9 @@ extension UICollectionViewLayoutAttributes {
     }
 }
 
+//这个自定义UICollectionViewLeftAlignedLayout的作用 让所有cell默认左对齐
+//比如说前后2个cell各自不同尺寸，系统会让当前cell尽可能与前后保持相同距离，也就会出现卡在UI中间不向左对齐的情况
+//就需要这个
 public class UICollectionViewLeftAlignedLayout: UICollectionViewFlowLayout {
     public override func layoutAttributesForElements(in rect: CGRect) -> [UICollectionViewLayoutAttributes]? {
         

@@ -28,7 +28,7 @@ final class ViewModel {
                         let cellViewModel = CellViewModel.init(title: hit.label, followersCount: hit.followersCount)
                         allCellsViewModels.append(cellViewModel)
                     }
-                }
+                }//这次cell之间不用嵌套，让所有cell都是cell级别，3次元的结构，变成1次元的数组allCellsViewModels，每个cell大小再分别设定
             }
         }
     }
