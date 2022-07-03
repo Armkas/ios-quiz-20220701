@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="SectionCell" reuseIdentifier="SectionCell" id="lKN-6D-YYb" customClass="SectionCell" customModule="myNews" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="8D5-H5-EUB">
+                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9jw-fx-0Fe">
+                        <rect key="frame" x="0.0" y="10" width="48" height="40"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="9jw-fx-0Fe" firstAttribute="top" secondItem="8D5-H5-EUB" secondAttribute="top" constant="10" id="FWZ-tb-EyD"/>
+                    <constraint firstItem="9jw-fx-0Fe" firstAttribute="leading" secondItem="8D5-H5-EUB" secondAttribute="leading" id="Hwp-bJ-1BN"/>
+                    <constraint firstAttribute="bottom" secondItem="9jw-fx-0Fe" secondAttribute="bottom" id="W79-yx-SpG"/>
+                </constraints>
+            </collectionViewCellContentView>
+            <connections>
+                <outlet property="title" destination="9jw-fx-0Fe" id="WEq-EA-M20"/>
+            </connections>
+            <point key="canvasLocation" x="-649" y="-61"/>
+        </collectionViewCell>
+    </objects>
+</document>
